@@ -1,16 +1,14 @@
-import logo from "./logo.svg";
 import "./App.css";
 import ListItem from "./components/ListItem";
+import { items } from "./data";
 
 function App() {
   return (
     <div>
       <ul className="nav">
-        <ListItem text="Hello." />
-        <ListItem text="Work." />
-        <ListItem text="About." />
-        <ListItem text="Careers." />
-        <ListItem text="Contact." />
+        {items.map((item) => (
+          <ListItem>{`${item}.`}</ListItem>
+        ))}
       </ul>
     </div>
   );
